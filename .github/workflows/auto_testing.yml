@@ -27,6 +27,7 @@ jobs:
             python find_lowest_number.py test_data/test3_input.txt test_data/test3_actual.txt
             diff -u test_data/test3_expected.txt test_data/test3_actual.txt
           else
+            touch test_data/test3_actual.txt
             echo "No numbers found in file" > test_data/test3_expected.txt
             diff -u test_data/test3_expected.txt test_data/test3_actual.txt
           fi
