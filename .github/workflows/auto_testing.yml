@@ -25,7 +25,7 @@ jobs:
           diff -u test_data/test2_expected.txt test_data/test2_actual.txt
           if [ -s "test_data/test3_input.txt" ]; then
             python find_lowest_number.py test_data/test3_input.txt test_data/test3_actual.txt
-            diff -u <(echo "No numbers found in file") <(cat test_data/test3_actual.txt)
+            diff -u <(echo "No numbers found in file") test_data/test3_actual.txt
           else
             echo "No numbers found in file" > test_data/test3_actual.txt
             diff -u test_data/test3_expected.txt test_data/test3_actual.txt
